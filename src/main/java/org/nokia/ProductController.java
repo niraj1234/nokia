@@ -56,8 +56,7 @@ public class ProductController {
 		productMap.put("drone", p5);
 		productMap.put("camera", p6);
 		
-        ProductVO product = productMap.get("prodName");
-		
+        ProductVO product = productMap.get(prodName);
 		return new ResponseEntity<ProductVO>(product , HttpStatus.OK);
 
 	}
