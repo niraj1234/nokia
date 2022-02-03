@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
-
 	@GetMapping("/products")
 	public ResponseEntity<List<ProductVO>> getAllProducts(){
 
@@ -22,14 +21,16 @@ public class ProductController {
 		ProductVO p2 = new ProductVO(2, "Dell Inspiron", 67223);
 		ProductVO p3 = new ProductVO(3, "Oppo Watch", 5666);
 		ProductVO p4 = new ProductVO(4, "Samsung TV", 77272);
+		ProductVO p5 = new ProductVO(5, "DJI Drone Mini", 45090);
+		ProductVO p6 = new ProductVO(6, "GoPro Hero 5", 27009);
 
 		productList.add(p1);
 		productList.add(p2);
 		productList.add(p3);
 		productList.add(p4);
+		productList.add(p5);
+		productList.add(p6);
 
 		return new ResponseEntity<List<ProductVO>>(productList,HttpStatus.OK);
-	}
-
-	
+	}	
 }
