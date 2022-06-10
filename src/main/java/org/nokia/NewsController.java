@@ -37,7 +37,7 @@ public class NewsController {
 		News n6 = new News(6, "News Heading Entertainment", "entertainment", "News Brief 6 Movie information will be covered here");
 		News n7 = new News(7, "News Heading General", "general", "General Event cover in Patna");
 		News n8 = new News(8, "News about Village", "village", "Many local news about village day to day life");
-		News n9 = new News(9, "International News", "international", "News update for Russia and Ucrain conflict");
+//		News n9 = new News(9, "International News", "international", "News update for Russia and Ucrain conflict");
 		
 		newsList.add(n1);		
 		newsList.add(n2);		
@@ -47,7 +47,7 @@ public class NewsController {
 		newsList.add(n6);
 		newsList.add(n7);
 		newsList.add(n8);
-		newsList.add(n9);
+//		newsList.add(n9);
 		
 		
         return new ResponseEntity<List<News>>(newsList , HttpStatus.OK);
