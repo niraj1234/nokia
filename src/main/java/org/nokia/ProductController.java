@@ -67,7 +67,7 @@ public class ProductController {
 		System.out.println("Number of Random data requested " + countRequest);
 		ProductVO p = null;
 		for(int i=1 ; i<countRequest ; i++) {
-			new ProductVO(i, "MObile data - "+i, 1000+i);
+			p = new ProductVO(i, "MObile data - "+i, 1000+i);
 			randomProducts.add(p);
 		}
 		return new ResponseEntity<List<ProductVO>>(randomProducts , HttpStatus.OK); 
