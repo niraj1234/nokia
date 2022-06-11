@@ -60,4 +60,17 @@ public class ProductController {
 		return new ResponseEntity<ProductVO>(product , HttpStatus.OK);
 
 	}
+	
+	@GetMapping("/random/{count}")
+	public ResponseEntity<List<ProductVO>> getProductByCount(@PathVariable("count") int countRequest){
+		List<ProductVO> randomProducts = new ArrayList<ProductVO>();
+		System.out.println("Number of Random data requested " + countRequest);
+		ProductVO p = null;
+		for(int i=1 ; i<countRequest ; i++) {
+			new ProductVO(i, "MObile data - "+i, 1000+i);
+			randomProducts.add(p);
+		}
+		return new ResponseEntity<List<ProductVO>>(randomProducts , HttpStatus.OK); 
+	}
+	
 }
