@@ -7,6 +7,8 @@ import java.util.Random;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -74,5 +76,11 @@ public class NewsController {
         
 		return siteName;
 	}
-	
+
+	@GetMapping("/site/{t}")
+	public String newsType(@PathVariable("t") String type) {
+		System.out.println("News Type in Request ==> " + type);
+		return "News Type "+ type;
+	}
+
 }
