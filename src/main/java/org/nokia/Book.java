@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
+public class Book {
+}
+
 
 //@Entity
 //@Table(name = "book_tbl")

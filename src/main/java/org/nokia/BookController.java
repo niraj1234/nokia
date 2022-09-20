@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
+public class BookController {
+	
+}
+
 /*
  * @RestController public class BookController {
  * 
