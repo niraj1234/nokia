@@ -29,6 +29,7 @@ public class ProductController {
 		ProductVO p6 = new ProductVO(6, "GoPro Hero 5", 27009);
 		ProductVO p7 = new ProductVO(7, "Boult Audio Mega Bass", 1299);
 		ProductVO p8 = new ProductVO(8, "Maono Microphone ", 3155);
+		ProductVO p9 = new ProductVO(9, "WD SSD 512GB", 3809);
 
 		productList.add(p1);
 		productList.add(p2);
@@ -38,6 +39,7 @@ public class ProductController {
 		productList.add(p6);
 		productList.add(p7);
 		productList.add(p8);
+		productList.add(p9);
 
 		return new ResponseEntity<List<ProductVO>>(productList,HttpStatus.OK);
 	}	
