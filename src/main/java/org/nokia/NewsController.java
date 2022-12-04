@@ -83,4 +83,11 @@ public class NewsController {
 		return "News Type "+ type;
 	}
 
+	@GetMapping("/host/{t}")
+	public String hostType(@PathVariable("t") String type) {
+		System.out.println("Host Type in Request ==> " + type);
+		return "Host Type "+ type;
+	}
+
+
 }
