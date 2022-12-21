@@ -95,14 +95,24 @@ public class ProductController {
 
 	}
 	
-	@GetMapping("/random/{count}")
-	public ResponseEntity<List<ProductVO>> getProductByCount(@PathVariable("count") int countRequest){
+	@GetMapping("/random/{count}/{step}")
+	public ResponseEntity<List<ProductVO>> getProductByCount(@PathVariable("count") int countRequest , @PathVariable("step") int step){
 		List<ProductVO> randomProducts = new ArrayList<ProductVO>();
 		System.out.println("Number of Random data requested " + countRequest);
+		System.out.println("Step of data to cath " + step);
+
+		if(step == 0 || step < 0) {
+			step = 10;
+		}
 		ProductVO p = null;
 		for(int i=1 ; i<countRequest ; i++) {
-			p = new ProductVO(i, "MObile data - "+i, 1000+i);
-			randomProducts.add(p);
+			p = new ProductVO(i, "Mobile data - "+i, 1000+i);
+
+			if( (i % step) == 0 ) {
+				randomProducts.add(p);				
+				System.out.println("Product Data ==> " + p);
+			}
+			
 		}
 		return new ResponseEntity<List<ProductVO>>(randomProducts , HttpStatus.OK); 
 	}
