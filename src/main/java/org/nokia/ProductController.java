@@ -18,7 +18,7 @@ public class ProductController {
 	@GetMapping("/")
 	public ResponseEntity<List<ProductVO>> getAllData(){
 
-		System.out.println("Nokia Project 3 ==> After password credentials");
+		System.out.println("Nokia Project 6 ==> After password credentials");
 
 		System.out.println("Root of the application EndPoint ==>");
 
