@@ -1,6 +1,7 @@
 package org.nokia;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,37 +17,11 @@ public class ProductController {
 
 	
 	@GetMapping("/")
-	public ResponseEntity<List<ProductVO>> getAllData(){
+	public ResponseEntity<String> getAllData(){
 
-		System.out.println("Nokia Project 6 ==> After password credentials");
+		System.out.println("Nokia Project  ==> 6");
 
-		System.out.println("Root of the application EndPoint ==>");
-
-		List<ProductVO> productList = new ArrayList<>();
-		ProductVO p1 = new ProductVO(1, "Mi Mobile", 12223);
-		ProductVO p2 = new ProductVO(2, "Dell Inspiron", 67223);
-		ProductVO p3 = new ProductVO(3, "Oppo Watch", 5666);
-		ProductVO p4 = new ProductVO(4, "Samsung TV", 77272);
-		ProductVO p5 = new ProductVO(5, "DJI Drone Mini", 45090);
-		ProductVO p6 = new ProductVO(6, "GoPro Hero 5", 27009);
-		ProductVO p7 = new ProductVO(7, "Boult Audio Mega Bass", 1299);
-		ProductVO p8 = new ProductVO(8, "Maono Microphone ", 3155);
-		ProductVO p9 = new ProductVO(9, "WD SSD 512GB", 3809);
-		ProductVO p10 = new ProductVO(10, "Nokia 2909", 1850);
-		
-
-		productList.add(p1);
-		productList.add(p2);
-		productList.add(p3);
-		productList.add(p4);
-		productList.add(p5);
-		productList.add(p6);
-		productList.add(p7);
-		productList.add(p8);
-		productList.add(p9);
-		productList.add(p10);
-
-		return new ResponseEntity<List<ProductVO>>(productList,HttpStatus.OK);
+		return new ResponseEntity<String>("Nokia Application Live"+ new Date() , HttpStatus.OK);
 	}	
 	
 
