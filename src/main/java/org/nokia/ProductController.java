@@ -19,7 +19,7 @@ public class ProductController {
 	@GetMapping("/")
 	public ResponseEntity<String> getAllData(){
 
-		return new ResponseEntity<String>("Nokia Application Live 7 ===>  "+ new Date() , HttpStatus.OK);
+		return new ResponseEntity<String>("Nokia Application Live 8 ===>  "+ new Date() , HttpStatus.OK);
 	}	
 	
 
